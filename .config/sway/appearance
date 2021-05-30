@@ -1,0 +1,9 @@
+default_border pixel 4px
+hide_edge_borders smart
+
+output * bg ~/Pictures/Wallpapers/atmosphere.png fill
+
+# class                 border  backgr. text    indicator child_border
+client.focused          #007fff #007fff #ffffff #2e9ef4   #007fff
+client.focused_inactive #f5f6f7 #f5f6f7 #071a33 #484e50   #d3dae3
+client.unfocused        #383c4a #383c4a #888888 #292d2e   #383c4a

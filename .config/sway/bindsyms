@@ -1,0 +1,13 @@
+#
+# Brightness
+#
+
+bindsym XF86MonBrightnessUp exec brightnessctl -d 'intel_backlight' set +750
+bindsym XF86MonBrightnessDown exec brightnessctl -d 'intel_backlight' set 750-
+
+#
+# Sound control
+#
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +1%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -1%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
