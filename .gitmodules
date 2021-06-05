@@ -13,3 +13,9 @@
 [submodule ".config/nvim/plugins/lightline.vim"]
 	path = .config/nvim/plugins/lightline.vim
 	url = git@github.com:itchyny/lightline.vim.git
+[submodule ".config/nvim/plugins/coc.nvim"]
+	path = .config/nvim/plugins/coc.nvim
+	url = git@github.com:neoclide/coc.nvim.git
+[submodule ".config/nvim/plugins/rust.vim"]
+	path = .config/nvim/plugins/rust.vim
+	url = git@github.com:rust-lang/rust.vim.git
