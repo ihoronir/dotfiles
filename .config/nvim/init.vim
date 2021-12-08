@@ -1,5 +1,6 @@
 set fenc=utf-8
 
+set tabstop=4
 set shiftwidth=4
 
 " Appeacance
