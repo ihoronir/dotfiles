@@ -14,13 +14,12 @@ font:
     family: 'Source Code Pro'
     style: Bold Italic
 
-background_opacity: 0.99
-
 # Window
 window:
   padding:
     x: 8
     y: 4
+  opacity: 0.99
 
 # Colors (Monokai Dark)
 colors:
