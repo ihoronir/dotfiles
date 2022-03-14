@@ -13,4 +13,5 @@ export QT_QPA_PLATFORMTHEME="qt5ct"
 #export XDG_CURRENT_DESKTOP="Unity"
 
 export PATH="/home/ihoronir/.deno/bin:$PATH"
+export LESSCHARSET=utf-8
 
