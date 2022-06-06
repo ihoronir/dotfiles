@@ -224,7 +224,7 @@ bar {
 # AutoStart'
 #
     #Input Method
-    exec fcitx-autostart
+    exec fcitx5
 
     #Applets
     exec blueman-applet
