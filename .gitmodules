@@ -1,21 +1,3 @@
-[submodule ".config/nvim/plugins/molokai"]
-	path = .config/nvim/plugins/molokai
-	url = git@github.com:tomasr/molokai.git
-[submodule ".config/nvim/plugins/indentLine"]
-	path = .config/nvim/plugins/indentLine
-	url = git@github.com:Yggdroot/indentLine.git
-[submodule ".config/nvim/plugins/nerdtree"]
-	path = .config/nvim/plugins/nerdtree
-	url = git@github.com:preservim/nerdtree.git
-[submodule ".config/nvim/plugins/vim-devicons"]
-	path = .config/nvim/plugins/vim-devicons
-	url = git@github.com:ryanoasis/vim-devicons.git
-[submodule ".config/nvim/plugins/lightline.vim"]
-	path = .config/nvim/plugins/lightline.vim
-	url = git@github.com:itchyny/lightline.vim.git
-[submodule ".config/nvim/plugins/coc.nvim"]
-	path = .config/nvim/plugins/coc.nvim
-	url = git@github.com:neoclide/coc.nvim.git
-[submodule ".config/nvim/plugins/rust.vim"]
-	path = .config/nvim/plugins/rust.vim
-	url = git@github.com:rust-lang/rust.vim.git
+[submodule ".config/nvim/pack/packer/start/packer.nvim"]
+	path = .config/nvim/pack/packer/start/packer.nvim
+	url = https://github.com/wbthomason/packer.nvim

@@ -229,6 +229,8 @@ bar {
     #Applets
     exec blueman-applet
 
+	exec mako
+
 include appearance
 include bindsyms
 include /etc/sway/config.d/*

@@ -19,13 +19,14 @@ window:
   padding:
     x: 8
     y: 4
-  opacity: 0.99
+  #opacity: 0.99
 
 # Colors (Monokai Dark)
 colors:
   # Default colors
   primary:
-    background: '#272822'
+    #background: '#272822'
+    background: '#1b1d1e'
     foreground: '#F8F8F2'
   # Normal colors
   normal:
