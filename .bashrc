@@ -15,4 +15,5 @@ export QT_QPA_PLATFORMTHEME="qt5ct"
 export PATH="/home/ihoronir/.deno/bin:$PATH"
 #export PATH="/home/ihoronir/.cargo/bin:$PATH"
 export LESSCHARSET=utf-8
+export _JAVA_AWT_WM_NONREPARENTING=1
 
