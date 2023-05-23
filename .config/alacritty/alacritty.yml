@@ -21,33 +21,63 @@ window:
     y: 4
   #opacity: 0.99
 
-# Colors (Monokai Dark)
 colors:
-  # Default colors
   primary:
-    #background: '#272822'
-    background: '#1b1d1e'
-    foreground: '#F8F8F2'
-  # Normal colors
+    background: '#161616'
+    foreground: '#f2f4f8'
+
   normal:
-    black:   '#272822'
-    red:     '#F92672'
-    green:   '#A6E22E'
-    yellow:  '#F4BF75'
-    blue:    '#66D9EF'
-    magenta: '#AE81FF'
-    cyan:    '#A1EFE4'
-    white:   '#F8F8F2'
-  # Bright colors
+    black:   '#282828'
+    red:     '#EE5396'
+    green:   '#25be6a'
+    yellow:  '#08BDBA'
+    blue:    '#78A9FF'
+    magenta: '#BE95FF'
+    cyan:    '#33B1FF'
+    white:   '#dfdfe0'
+    orange:  '#3DDBD9'
+    pink:    '#FF7EB6'
+
   bright:
-    black:   '#75715E'
-    red:     '#F92672'
-    green:   '#A6E22E'
-    yellow:  '#F4BF75'
-    blue:    '#66D9EF'
-    magenta: '#AE81FF'
-    cyan:    '#A1EFE4'
-    white:   '#F9F8F5'
+    black:   '#5c5c5c'
+    red:     '#ea2a7d'
+    green:   '#1de276'
+    yellow:  '#00bfff'
+    blue:    '#669eff'
+    magenta: '#ad7aff'
+    cyan:    '#0aa1ff'
+    white:   '#f5f5f5'
+    orange:  '#3DDBD9'
+    pink:    '#FF7EB6'
+
+
+# Colors (Monokai Dark)
+#colors:
+#  # Default colors
+#  primary:
+#    #background: '#272822'
+#    background: '#1b1d1e'
+#    foreground: '#F8F8F2'
+#  # Normal colors
+#  normal:
+#    black:   '#272822'
+#    red:     '#F92672'
+#    green:   '#A6E22E'
+#    yellow:  '#F4BF75'
+#    blue:    '#66D9EF'
+#    magenta: '#AE81FF'
+#    cyan:    '#A1EFE4'
+#    white:   '#F8F8F2'
+#  # Bright colors
+#  bright:
+#    black:   '#75715E'
+#    red:     '#F92672'
+#    green:   '#A6E22E'
+#    yellow:  '#F4BF75'
+#    blue:    '#66D9EF'
+#    magenta: '#AE81FF'
+#    cyan:    '#A1EFE4'
+#    white:   '#F9F8F5'
 
 ## Colors (Monokai Pro)
 #colors:

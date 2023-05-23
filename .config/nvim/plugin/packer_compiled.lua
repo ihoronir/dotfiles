@@ -232,7 +232,7 @@ _G.packer_plugins = {
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/ihoronir/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
-    url = "https://github.com/kyazdani42/nvim-web-devicons"
+    url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -248,11 +248,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ihoronir/.local/share/nvim/site/pack/packer/start/quick-scope",
     url = "https://github.com/unblevable/quick-scope"
-  },
-  ["rust.vim"] = {
-    loaded = true,
-    path = "/home/ihoronir/.local/share/nvim/site/pack/packer/start/rust.vim",
-    url = "https://github.com/rust-lang/rust.vim"
   },
   ["sidebar.nvim"] = {
     loaded = true,
