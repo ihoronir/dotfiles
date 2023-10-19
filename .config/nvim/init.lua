@@ -1,10 +1,29 @@
-require("plugins")
+-- require("plugins")
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+    vim.fn.system({
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "https://github.com/folke/lazy.nvim.git",
+        "--branch=stable", -- latest stable release
+        lazypath,
+    })
+end
+vim.opt.rtp:prepend(lazypath)
+
+plugins = require("plugins")
+require("lazy").setup(plugins)
 
 vim.opt.fenc = "utf-8"
 
 vim.opt.expandtab = true
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
+
+vim.keymap.set("n", "x", '"_x')
+vim.keymap.set("n", "X", '"_X')
+vim.keymap.set("n", "s", '"_s')
 
 vim.keymap.set("n", "<C-n>", "<cmd>bnext<cr>", { noremap = true, silent = true })
 vim.keymap.set("n", "<C-p>", "<cmd>bprevious<cr>", { noremap = true, silent = true })
@@ -18,17 +37,27 @@ vim.opt.cursorline = true
 --set smartindent
 --set visualbell
 vim.opt.termguicolors = true
+vim.opt.scrolloff = 4
+--vim.opt.ignorecase = true
+--vim.opt.smartcase = true
+vim.opt.inccommand = "split"
 
 --" NvimTree
 vim.keymap.set("n", "<C-e>", "<cmd>NvimTreeToggle<CR>", { silent = true })
 vim.keymap.set("n", "0", "^")
 vim.keymap.set("n", "^", "0", { silent = true })
 
-vim.g.qs_highlight_on_keys = { "f", "F", "t", "T" }
-vim.cmd("highlight QuickScopePrimary guifg='#afff5f' gui=inverse ctermfg=155 cterm=underline")
-vim.cmd("highlight QuickScopeSecondary guifg='#5fffff' gui=inverse ctermfg=81 cterm=underline")
+--vim.g.qs_highlight_on_keys = { "f", "F", "t", "T" }
+--vim.cmd("highlight QuickScopePrimary guifg='#afff5f' gui=inverse ctermfg=155 cterm=underline")
+--vim.cmd("highlight QuickScopeSecondary guifg='#5fffff' gui=inverse ctermfg=81 cterm=underline")
 
 local navic = require("nvim-navic")
+navic.setup({
+    lsp = {
+        auto_attach = true,
+    },
+    highlight = true,
+})
 require("lualine").setup({
     sections = {
         lualine_c = {
@@ -39,7 +68,14 @@ require("lualine").setup({
 
 require("colorizer").setup()
 
-require("indent_blankline").setup()
+require("ibl").setup({
+    indent = {
+        char = "▏",
+    },
+    scope = {
+        enabled = false,
+    },
+})
 
 local builtin = require("telescope.builtin")
 vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
@@ -58,15 +94,13 @@ require("nvim-tree").setup()
 
 require("sidebar-nvim").setup()
 
-require("neo-tree").setup()
-
 require("scrollbar").setup()
 
 require("nvim-treesitter.configs").setup({
-    ensure_installed = "all",
+    ensure_installed = { "c", "lua", "json", "rust", "javascript", "html" },
+    --sync_install = false,
     highlight = {
         enable = true,
-        --disable = { "rust" },
     },
     matchup = {
         enable = true,
@@ -134,10 +168,6 @@ local lspconfig_setup = function(server_name)
             vim.keymap.set("n", "gtD", vim.lsp.buf.type_definition, bufopts)
             vim.keymap.set("n", "grf", vim.lsp.buf.references, bufopts)
             vim.keymap.set("n", "<space>p", vim.lsp.buf.format, bufopts)
-
-            if client.server_capabilities.documentSymbolProvider then
-                navic.attach(client, bufnr)
-            end
         end,
         capabilities = capabilities,
     }
@@ -164,8 +194,7 @@ end
 
 mason_lspconfig.setup_handlers({ lspconfig_setup })
 
-local servers = { "clangd", "rust_analyzer", "texlab" }
-for _, lsp in ipairs(servers) do
+for _, lsp in ipairs({ "clangd", "rust_analyzer", "texlab", "typst_lsp" }) do
     lspconfig_setup(lsp)
 end
 
