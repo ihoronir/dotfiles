@@ -42,14 +42,10 @@ vim.opt.scrolloff = 4
 --vim.opt.smartcase = true
 vim.opt.inccommand = "split"
 
---" NvimTree
+-- NvimTree
 vim.keymap.set("n", "<C-e>", "<cmd>NvimTreeToggle<CR>", { silent = true })
 vim.keymap.set("n", "0", "^")
 vim.keymap.set("n", "^", "0", { silent = true })
-
---vim.g.qs_highlight_on_keys = { "f", "F", "t", "T" }
---vim.cmd("highlight QuickScopePrimary guifg='#afff5f' gui=inverse ctermfg=155 cterm=underline")
---vim.cmd("highlight QuickScopeSecondary guifg='#5fffff' gui=inverse ctermfg=81 cterm=underline")
 
 local navic = require("nvim-navic")
 navic.setup({
